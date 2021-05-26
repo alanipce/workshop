@@ -20,6 +20,8 @@
 		E7965027265ECEAF006CE562 /* BarbellLoadCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7965026265ECEAF006CE562 /* BarbellLoadCalculator.swift */; };
 		E796502A265ECEDC006CE562 /* BarbellLoadCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7965029265ECEDC006CE562 /* BarbellLoadCalculatorTests.swift */; };
 		E796502D265EDD30006CE562 /* BarbellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796502C265EDD30006CE562 /* BarbellView.swift */; };
+		E796502F265EE452006CE562 /* PlateCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796502E265EE452006CE562 /* PlateCalculatorView.swift */; };
+		E7965032265EEA30006CE562 /* View+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7965031265EEA30006CE562 /* View+Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		E7965026265ECEAF006CE562 /* BarbellLoadCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbellLoadCalculator.swift; sourceTree = "<group>"; };
 		E7965029265ECEDC006CE562 /* BarbellLoadCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbellLoadCalculatorTests.swift; sourceTree = "<group>"; };
 		E796502C265EDD30006CE562 /* BarbellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbellView.swift; sourceTree = "<group>"; };
+		E796502E265EE452006CE562 /* PlateCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateCalculatorView.swift; sourceTree = "<group>"; };
+		E7965031265EEA30006CE562 /* View+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Keyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		E7964FEF265ECE5D006CE562 /* workshop */ = {
 			isa = PBXGroup;
 			children = (
+				E7965030265EEA24006CE562 /* Extensions */,
 				E7965020265ECE6F006CE562 /* PlateCalculator */,
 				E7964FF0265ECE5D006CE562 /* WorkshopApp.swift */,
 				E7964FF2265ECE5D006CE562 /* ContentView.swift */,
@@ -179,8 +184,17 @@
 			isa = PBXGroup;
 			children = (
 				E796502C265EDD30006CE562 /* BarbellView.swift */,
+				E796502E265EE452006CE562 /* PlateCalculatorView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E7965030265EEA24006CE562 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E7965031265EEA30006CE562 /* View+Keyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +331,11 @@
 				E7965023265ECE89006CE562 /* Barbell.swift in Sources */,
 				E796502D265EDD30006CE562 /* BarbellView.swift in Sources */,
 				E7964FFD265ECE61006CE562 /* workshop.xcdatamodeld in Sources */,
+				E796502F265EE452006CE562 /* PlateCalculatorView.swift in Sources */,
 				E7965027265ECEAF006CE562 /* BarbellLoadCalculator.swift in Sources */,
 				E7965025265ECE9B006CE562 /* Plate.swift in Sources */,
 				E7964FF1265ECE5D006CE562 /* WorkshopApp.swift in Sources */,
+				E7965032265EEA30006CE562 /* View+Keyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

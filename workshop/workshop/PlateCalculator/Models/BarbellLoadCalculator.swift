@@ -25,7 +25,7 @@ class BarbellLoadCalculator {
   ///
   /// - Returns: the plate configuration that uses the least amount of plates.
   func calculateOptimalPlateConfiguration(to load: Float, with plates: [Plate]) throws -> [Plate]? {
-    let plateLoad = load - barbell.weight
+    let plateLoad = (load - barbell.weight) / 2
     if plateLoad == 0 {
       return []
     }

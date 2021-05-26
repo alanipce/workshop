@@ -15,13 +15,13 @@ class BarbellLoadCalculatorTests: XCTestCase {
 
     // p45 as an option
     let result1 = try calculator.calculateOptimalPlateConfiguration(to: 135, with: [.p45, .p45])
-    XCTAssertEqual(result1, [.p45, .p45])
+    XCTAssertEqual(result1, [.p45])
 
-    let result2 = try calculator.calculateOptimalPlateConfiguration(to: 135, with: [.p35, .p10, .p45])
-    XCTAssertEqual(result2, [.p45, .p35, .p10])
+    let result2 = try calculator.calculateOptimalPlateConfiguration(to: 135, with: [.p35, .p10])
+    XCTAssertEqual(result2, [.p35, .p10])
 
     let result3 = try calculator.calculateOptimalPlateConfiguration(to: 135, with: [.p35, .p10, .p45, .p45])
-    XCTAssertEqual(result3, [.p45, .p45])
+    XCTAssertEqual(result3, [.p45])
 
     let result4 = try calculator.calculateOptimalPlateConfiguration(to: 135, with: [.p25])
     XCTAssertNil(result4)

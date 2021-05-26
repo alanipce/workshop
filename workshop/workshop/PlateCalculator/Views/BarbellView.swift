@@ -65,7 +65,7 @@ struct BarbellView: View {
     case .p10:
       return .green
     case .p5, .p2_5:
-      return .gray
+      return .black
     }
   }
 }
