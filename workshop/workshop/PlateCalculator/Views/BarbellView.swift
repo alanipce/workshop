@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct BarbellView: View {
-  let barColor: Color = .gray
+  private let barColor: Color = .gray
+  private let maxBarbellHeight: CGFloat = 200
   @Binding var plates: [Plate]
   
   var body: some View {
@@ -25,33 +26,30 @@ struct BarbellView: View {
             Rectangle()
               .foregroundColor(plateColor(plate))
               .cornerRadius(5)
-              .frame(width: 40 * CGFloat(min(plateProportion(plate), 1)), height: 200 * CGFloat(min(plateProportion(plate), 1)))
             Text(plateWeight(plate))
               .foregroundColor(.white)
               .fontWeight(.bold)
+              .fixedSize()
+              .lineLimit(1)
               .rotationEffect(Angle(degrees: 90))
           }
+          .frame(
+            width: 40,
+            height: maxBarbellHeight
+          )
         }
         Rectangle()
           .foregroundColor(barColor)
           .frame(height: 30)
       }
-    }
-  }
-  
-  private func plateProportion(_ plate: Plate) -> Float {
-    switch plate {
-    case .p45, .p35, .p25, .p10, .p15:
-      return 1
-    case .p5, .p2_5:
-      return 0.5
+      .frame(maxWidth: 800, minHeight: maxBarbellHeight)
     }
   }
   
   private func plateWeight(_ plate: Plate) -> String {
     let numberFormatter = NumberFormatter()
     numberFormatter.maximumFractionDigits = 1
-    return numberFormatter.string(for: plate.weight) ?? ""
+    return numberFormatter.string(for: plate.weight)!
   }
   
   private func plateColor(_ plate: Plate) -> Color {
