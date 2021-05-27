@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlateCalculatorView: View {
   @State var plates = [Plate]()
+  @State var barbell: Barbell = .standard
   @State var loadInput = ""
   
   /// TODO: remove hardcoded values matching my current setup
@@ -43,7 +44,7 @@ struct PlateCalculatorView: View {
                 
       })
       Spacer(minLength: 100)
-      BarbellView(plates: $plates)
+      BarbellView(barbell: $barbell, plates: $plates)
     }
   }
   
