@@ -18,6 +18,7 @@ struct PlateCalculatorView: View {
     .p45,
     .p35,
     .p25,
+    .p15,
     .p10,
     .p5,
     .p2_5

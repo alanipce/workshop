@@ -41,7 +41,7 @@ struct BarbellView: View {
   
   private func plateProportion(_ plate: Plate) -> Float {
     switch plate {
-    case .p45, .p35, .p25, .p10:
+    case .p45, .p35, .p25, .p10, .p15:
       return 1
     case .p5, .p2_5:
       return 0.5
@@ -62,9 +62,9 @@ struct BarbellView: View {
       return .blue
     case .p25:
       return .yellow
-    case .p10:
+    case .p15:
       return .green
-    case .p5, .p2_5:
+    case .p10, .p5, .p2_5:
       return .black
     }
   }

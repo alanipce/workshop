@@ -56,20 +56,20 @@ class BarbellLoadCalculator {
     var remainingPlates = orderedPlates
     let heaviestPlate = remainingPlates.remove(at: 0)
     
+    // We cannot assume the "greedy" path using the heaviest available weight will lead to
+    // the optimal global path. Sometimes a combination of lighter plates achieve the result with
+    // less plates on the bar.
+    //
+    // For example:
+    // Load: 165 with plates [.p45, .p35, .p25, .p5, .p5, .p5]
+    // Picking the heaviest path will result in [.p45, .p5, .p5, .p5]
+    // wheras picking the alternative path yields the [.p35, .p25] result
     var optimalPath1 = findOptimalPath(to: load - heaviestPlate.weight, with: remainingPlates)
     optimalPath1?.append(heaviestPlate)
     
     let optimalPath2 = findOptimalPath(to: load, with: orderedPlates.filter { $0 != heaviestPlate })
 
-    if optimalPath1 == nil && optimalPath2 == nil {
-      return nil
-    }
-
     let foundPaths = [optimalPath1, optimalPath2].compactMap { $0 }
-    if foundPaths.isEmpty {
-      return nil
-    }
-    
-    return foundPaths.sorted { $0.count < $1.count }[0]
+    return foundPaths.isEmpty ? nil : foundPaths.sorted { $0.count < $1.count }[0]
   }
 }

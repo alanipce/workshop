@@ -12,6 +12,7 @@ enum Plate: Equatable {
   case p45
   case p35
   case p25
+  case p15
   case p10
   case p5
   case p2_5
@@ -25,6 +26,8 @@ enum Plate: Equatable {
       return 35
     case .p25:
       return 25
+    case .p15:
+      return 15
     case .p10:
       return 10
     case .p5:
