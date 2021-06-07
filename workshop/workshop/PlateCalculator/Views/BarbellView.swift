@@ -28,7 +28,7 @@ struct BarbellView: View {
         }
         Rectangle()
           .foregroundColor(barColor)
-          .frame(width: 15, height: 50)
+          .frame(width: 15, height: 60)
         ForEach(plates, id: \.self) { plate in
           ZStack {
             Rectangle()
