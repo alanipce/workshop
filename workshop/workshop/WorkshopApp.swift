@@ -13,7 +13,7 @@ struct WorkshopApp: App {
   
   var body: some Scene {
     WindowGroup {
-      PlateCalculatorView()
+      ContentView()
         .environment(\.managedObjectContext, persistenceController.container.viewContext)
     }
   }

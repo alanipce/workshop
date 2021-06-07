@@ -22,6 +22,8 @@
 		E796502D265EDD30006CE562 /* BarbellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796502C265EDD30006CE562 /* BarbellView.swift */; };
 		E796502F265EE452006CE562 /* PlateCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796502E265EE452006CE562 /* PlateCalculatorView.swift */; };
 		E7965032265EEA30006CE562 /* View+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7965031265EEA30006CE562 /* View+Keyboard.swift */; };
+		E7FFA73B266DA4A400042265 /* WorkoutLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFA73A266DA4A400042265 /* WorkoutLogView.swift */; };
+		E7FFA73F266DA61E00042265 /* MovementPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFA73E266DA61E00042265 /* MovementPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		E796502C265EDD30006CE562 /* BarbellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbellView.swift; sourceTree = "<group>"; };
 		E796502E265EE452006CE562 /* PlateCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateCalculatorView.swift; sourceTree = "<group>"; };
 		E7965031265EEA30006CE562 /* View+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Keyboard.swift"; sourceTree = "<group>"; };
+		E7FFA73A266DA4A400042265 /* WorkoutLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutLogView.swift; path = ../WorkoutLogView.swift; sourceTree = "<group>"; };
+		E7FFA73E266DA61E00042265 /* MovementPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				E7965030265EEA24006CE562 /* Extensions */,
+				E7FFA739266DA3C300042265 /* WorkoutLog */,
 				E7965020265ECE6F006CE562 /* PlateCalculator */,
 				E7964FF0265ECE5D006CE562 /* WorkshopApp.swift */,
 				E7964FF2265ECE5D006CE562 /* ContentView.swift */,
@@ -195,6 +200,31 @@
 				E7965031265EEA30006CE562 /* View+Keyboard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E7FFA739266DA3C300042265 /* WorkoutLog */ = {
+			isa = PBXGroup;
+			children = (
+				E7FFA73D266DA60F00042265 /* Models */,
+				E7FFA73C266DA4BF00042265 /* Views */,
+			);
+			path = WorkoutLog;
+			sourceTree = "<group>";
+		};
+		E7FFA73C266DA4BF00042265 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7FFA73A266DA4A400042265 /* WorkoutLogView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E7FFA73D266DA60F00042265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7FFA73E266DA61E00042265 /* MovementPattern.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,7 +359,9 @@
 				E7964FFA265ECE61006CE562 /* Persistence.swift in Sources */,
 				E7964FF3265ECE5D006CE562 /* ContentView.swift in Sources */,
 				E7965023265ECE89006CE562 /* Barbell.swift in Sources */,
+				E7FFA73B266DA4A400042265 /* WorkoutLogView.swift in Sources */,
 				E796502D265EDD30006CE562 /* BarbellView.swift in Sources */,
+				E7FFA73F266DA61E00042265 /* MovementPattern.swift in Sources */,
 				E7964FFD265ECE61006CE562 /* workshop.xcdatamodeld in Sources */,
 				E796502F265EE452006CE562 /* PlateCalculatorView.swift in Sources */,
 				E7965027265ECEAF006CE562 /* BarbellLoadCalculator.swift in Sources */,
