@@ -10,7 +10,17 @@ import CoreData
 
 struct ContentView: View {
   var body: some View {
-    WorkoutLogView()
+    NavigationView {
+      WorkoutLogView()
+        .navigationTitle("Workout log")
+        .toolbar {
+          NavigationLink(
+            "Plate Calculator",
+            destination: PlateCalculatorView().navigationTitle("Plate Calculator")
+          )
+        }
+        .padding()
+    }
   }
 }
 

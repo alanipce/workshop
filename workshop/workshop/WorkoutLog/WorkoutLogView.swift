@@ -104,6 +104,12 @@ struct WorkoutInputView: View {
       
       do {
         try viewContext.save()
+        
+        // clear the inputs
+        load = ""
+        reps = ""
+        hideKeyboard()
+        
       } catch {
         let nsError = error as NSError
         fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
