@@ -13,9 +13,10 @@ struct PersistenceController {
   static var preview: PersistenceController = {
     let result = PersistenceController(inMemory: true)
     let viewContext = result.container.viewContext
-    for _ in 0..<10 {
+    let exercises: [MovementPattern] = [.benchPress, .squat, .deadlift]
+    for exercise in exercises {
       let newItem = WorkoutLogEntry(context: viewContext)
-      newItem.movementId = MovementPattern.benchPress.id
+      newItem.movementId = exercise.id
       newItem.reps = 12
       newItem.load = 225
       newItem.timestamp = Date()

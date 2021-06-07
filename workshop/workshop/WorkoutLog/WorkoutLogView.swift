@@ -36,7 +36,7 @@ struct WorkoutLogView: View {
   
   var body: some View {
     ScrollView {
-      VStack {
+      VStack(alignment: .leading) {
         ForEach(exercises) { exercise in
           WorkoutInputView(exercise: exercise)
           WorkoutEntriesView(items: items.filter { $0.movementId == exercise.id })
@@ -56,7 +56,7 @@ struct WorkoutEntriesView: View {
   }()
   
   var body: some View {
-    VStack(alignment: .leading) {
+    VStack {
       ForEach(items) { item in
         Text("\(NSNumber(value: item.load), formatter: loadFormatter) x \(item.reps)")
       }
@@ -76,8 +76,10 @@ struct WorkoutInputView: View {
       Text(exercise.name)
       Spacer()
       TextField("Load", text: $load)
+        .keyboardType(.numberPad)
         .frame(width: 60)
       TextField("Reps", text: $reps)
+        .keyboardType(.numberPad)
         .frame(width: 50)
       Button {
         addItem()
@@ -88,10 +90,15 @@ struct WorkoutInputView: View {
   }
   
   private func addItem() {
+    guard let loadValue = Float(load), let repValue = Int16(reps), loadValue > 0, repValue > 0 else {
+      print("Attempted to save workout entry with invalid load or rep value.")
+      return
+    }
+    
     withAnimation {
       let newItem = WorkoutLogEntry(context: viewContext)
-      newItem.reps = 12
-      newItem.load = 225
+      newItem.reps = repValue
+      newItem.load = loadValue
       newItem.movementId = exercise.id
       newItem.timestamp = Date()
       
